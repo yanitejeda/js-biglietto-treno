@@ -7,33 +7,49 @@ va applicato uno sconto del 40% per gli over 65.
 L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 */
 
-//numero di chilometri che vuole percorrere 
-//l’età del passeggero
-
 let promptChilometriDaPercorrere = prompt("quanti chilometri vuoi percorrere"); //ok
 let promptEtaPasseggero = prompt("quanti anni hai?");                           //ok
 const prezzoViaggio = 0.21;                                                     //ok
 const prezzoTotale =  (promptChilometriDaPercorrere * prezzoViaggio)       //calcolo prezzo del viaggio
 
-
 promptChilometriDaPercorrere = parseInt (promptChilometriDaPercorrere);       //controllo se sono dei numeri
 promptEtaPasseggero = parseInt(promptEtaPasseggero);                          //controllo se sono dei numeri
 
-
-
-
-
-if (isNaN(promptChilometriDaPercorrere)){
+if (isNaN(promptChilometriDaPercorrere)){                                   //controllo se sono dei numeri
     alert("il numero inserito non è un numero")
 } else{
-
 }
 
 
-if (isNaN(promptEtaPasseggero)){
-    alert("il numero inserito non è un numero")
-} else{
+if (isNaN(promptEtaPasseggero)){                                           //controllo se sono dei numeri
+    alert("il numero inserito non è un numero");
+} 
 
+/* elementi selezionati singolarmente
+
+if (promptEtaPasseggero <=18);{
+    alert (`totale da pagare ${ prezzoTotale - (prezzoTotale * 20 / 100 )} €`)
 }
 
-alert ("totale da pagare " + prezzoTotale + "€") //totale da pagare
+if (promptEtaPasseggero >=65);{
+    alert (`totale da pagare ${ prezzoTotale - (prezzoTotale * 40 / 100 )} €`)
+}
+
+alert ("totale da pagare " + prezzoTotale + "€"); //totale da pagare
+
+*/
+
+
+
+
+if (promptEtaPasseggero <=18 ){
+    alert (`totale da pagare ${ prezzoTotale - (prezzoTotale * 20 / 100 )} €`)
+}
+else if (promptEtaPasseggero >=65 ){
+    alert (`totale da pagare ${ prezzoTotale - (prezzoTotale * 40 / 100 )} €`)
+}
+else {
+    alert ("totale da pagare " + prezzoTotale + "€")
+}
+
+
