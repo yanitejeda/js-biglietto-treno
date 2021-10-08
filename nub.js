@@ -25,7 +25,7 @@ if (isNaN(promptEtaPasseggero)){                                           //con
     alert("il numero inserito non è un numero");
 } 
 
-/* elementi selezionati singolarmente
+/* elementi selezionati singolarmente.
 
 if (promptEtaPasseggero <=18);{
     alert (`totale da pagare ${ prezzoTotale - (prezzoTotale * 20 / 100 )} €`)
